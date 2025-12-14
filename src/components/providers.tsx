@@ -41,9 +41,11 @@ interface SlideOverContextType {
 
 interface SidebarContextType {
   isSidebarOpen: boolean;
+  isCollapsed: boolean;
   openSidebar: () => void;
   closeSidebar: () => void;
   toggleSidebar: () => void;
+  toggleCollapsed: () => void;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -119,6 +121,7 @@ export function Providers({ children }: { children: ReactNode }) {
   const [slideOverOpen, setSlideOverOpen] = useState(false);
   const [selectedClientId, setSelectedClientId] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   useEffect(() => {
     const storedUser = getStoredUser();
@@ -217,6 +220,10 @@ export function Providers({ children }: { children: ReactNode }) {
     setSidebarOpen(prev => !prev);
   }, []);
 
+  const toggleCollapsed = useCallback(() => {
+    setSidebarCollapsed(prev => !prev);
+  }, []);
+
   if (!isHydrated) {
     return null;
   }
@@ -226,7 +233,7 @@ export function Providers({ children }: { children: ReactNode }) {
       <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
         <ModalContext.Provider value={{ activeModal, modalData, openModal, closeModal }}>
           <SlideOverContext.Provider value={{ isOpen: slideOverOpen, selectedClientId, openSlideOver, closeSlideOver }}>
-            <SidebarContext.Provider value={{ isSidebarOpen: sidebarOpen, openSidebar, closeSidebar, toggleSidebar }}>
+            <SidebarContext.Provider value={{ isSidebarOpen: sidebarOpen, isCollapsed: sidebarCollapsed, openSidebar, closeSidebar, toggleSidebar, toggleCollapsed }}>
               <PlanProvider initialPlan={user?.plan || 'team'} userRole={user?.role || 'owner'}>
                 {children}
               </PlanProvider>
