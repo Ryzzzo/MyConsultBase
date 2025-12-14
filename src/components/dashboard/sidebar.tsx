@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
-import Image from 'next/image';
 import {
   LayoutDashboard,
   Users,
@@ -85,13 +84,10 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
       >
         <div className="p-4 border-b border-border-light flex items-center justify-between">
           <Link href="/dashboard" className="flex items-center" onClick={handleNavClick}>
-            <Image
-              src="/mcb_light_small_wide.png"
+            <img
+              src="/consultbase-logo.svg"
               alt="ConsultBase"
-              width={140}
-              height={32}
               className="h-8 w-auto"
-              priority
             />
           </Link>
           <button

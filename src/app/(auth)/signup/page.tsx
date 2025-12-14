@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { User, Mail, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -50,13 +49,10 @@ export default function SignupPage() {
     <div className="w-full max-w-md">
       <div className="bg-white rounded-xl shadow-custom-lg border border-border-light p-8">
         <div className="flex items-center justify-center mb-8">
-          <Image
-            src="/mcb_light_small_wide.png"
+          <img
+            src="/consultbase-logo.svg"
             alt="ConsultBase"
-            width={160}
-            height={36}
             className="h-9 w-auto"
-            priority
           />
         </div>
 

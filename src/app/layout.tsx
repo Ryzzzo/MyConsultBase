@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: 'ConsultBase - The Client Portal Built for Consultants',
   description: 'The client portal that makes independent consultants look like established firms. Branded portals, seamless payments, organized deliverables.',
   icons: {
-    icon: '/mcb_light_favicon.png',
-    shortcut: '/mcb_light_favicon.png',
-    apple: '/mcb_light_favicon.png',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 };
 

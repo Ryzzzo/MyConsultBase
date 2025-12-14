@@ -1,0 +1,6 @@
+<svg width="320" height="70" viewBox="0 0 320 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="46" width="48" height="8" rx="4" fill="#2D6A4F"/>
+  <rect x="18" y="30" width="40" height="8" rx="4" fill="#2D6A4F"/>
+  <rect x="10" y="14" width="36" height="8" rx="4" fill="#2D6A4F"/>
+  <text x="68" y="52" font-family="'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="42" font-weight="600" letter-spacing="-0.5"><tspan fill="#1a1a1a">Consult</tspan><tspan fill="#2D6A4F">Base</tspan></text>
+</svg>

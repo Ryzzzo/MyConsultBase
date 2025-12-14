@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   Layers, Star, LayoutGrid, FileText, CreditCard, MessageSquare,
   Upload, Mail, Smile, AlertCircle, Check, Shield, Calendar, Users
@@ -27,13 +26,10 @@ function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 bg-warm-bg/90 backdrop-blur-xl border-b border-border-light">
       <div className="max-w-[1200px] mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <Image
-            src="/mcb_light_small_wide.png"
+          <img
+            src="/consultbase-logo.svg"
             alt="ConsultBase"
-            width={240}
-            height={56}
             className="h-12 sm:h-14 w-auto"
-            priority
           />
         </Link>
 
@@ -376,11 +372,9 @@ function Footer() {
         <div className="flex flex-col lg:flex-row justify-between pb-12 border-b border-white/10 mb-8 gap-8">
           <div className="max-w-[300px]">
             <div className="mb-4">
-              <Image
-                src="/mcb_light_small_wide.png"
+              <img
+                src="/consultbase-logo.svg"
                 alt="ConsultBase"
-                width={150}
-                height={34}
                 className="h-9 w-auto brightness-0 invert"
               />
             </div>
